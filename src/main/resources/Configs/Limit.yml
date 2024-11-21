@@ -1,0 +1,8 @@
+# rscl.default (기본적으로 활성화됨)
+# rscl.default (Enabled by default)
+default:
+  - help
+#rscl.worldedit
+worldedit:
+  - /wand
+  - /copy
