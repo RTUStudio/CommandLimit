@@ -36,7 +36,7 @@ public class PlayerCommandPreprocess extends RSListener {
         if (!set.contains(cmd)) {
             e.setCancelled(true);
             PlayerChat chat = PlayerChat.of(getPlugin());
-            chat.announce(player, getMessage().get("noPermission"));
+            chat.announce(player, getMessage().get(player, "noPermission"));
         }
     }
 
