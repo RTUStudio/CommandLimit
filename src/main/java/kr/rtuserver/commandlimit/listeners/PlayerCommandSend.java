@@ -12,11 +12,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class PlayerCommandSend extends RSListener {
+public class PlayerCommandSend extends RSListener<RSCommandLimit> {
 
-    private final RSCommandLimit plugin = RSCommandLimit.getInstance();
-
-    public PlayerCommandSend(RSPlugin plugin) {
+    public PlayerCommandSend(RSCommandLimit plugin) {
         super(plugin);
     }
 
@@ -28,7 +26,7 @@ public class PlayerCommandSend extends RSListener {
         e.getCommands().clear();
 
         Set<String> set = new HashSet<>();
-        Map<String, List<String>> map = plugin.getLimitConfig().getMap();
+        Map<String, List<String>> map = getPlugin().getLimitConfig().getMap();
         for (String group : map.keySet()) {
             List<String> list = map.get(group);
             if (list.isEmpty()) continue;

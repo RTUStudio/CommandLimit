@@ -1,7 +1,6 @@
 package kr.rtuserver.commandlimit.listeners;
 
 import kr.rtuserver.commandlimit.RSCommandLimit;
-import kr.rtuserver.framework.bukkit.api.RSPlugin;
 import kr.rtuserver.framework.bukkit.api.listener.RSListener;
 import kr.rtuserver.framework.bukkit.api.utility.player.PlayerChat;
 import org.bukkit.entity.Player;
@@ -13,11 +12,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class PlayerCommandPreprocess extends RSListener {
+public class PlayerCommandPreprocess extends RSListener<RSCommandLimit> {
 
-    private final RSCommandLimit plugin = RSCommandLimit.getInstance();
-
-    public PlayerCommandPreprocess(RSPlugin plugin) {
+    public PlayerCommandPreprocess(RSCommandLimit plugin) {
         super(plugin);
     }
 
@@ -27,7 +24,7 @@ public class PlayerCommandPreprocess extends RSListener {
         if (player.hasPermission("rscl.bypass.execute")) return;
         String cmd = e.getMessage().replaceFirst("/", "").split(" ")[0];
         Set<String> set = new HashSet<>();
-        Map<String, List<String>> map = plugin.getLimitConfig().getMap();
+        Map<String, List<String>> map = getPlugin().getLimitConfig().getMap();
         for (String group : map.keySet()) {
             List<String> list = map.get(group);
             if (list.isEmpty()) continue;

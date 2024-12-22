@@ -1,6 +1,6 @@
 package kr.rtuserver.commandlimit.configuration;
 
-import kr.rtuserver.framework.bukkit.api.RSPlugin;
+import kr.rtuserver.commandlimit.RSCommandLimit;
 import kr.rtuserver.framework.bukkit.api.config.RSConfiguration;
 import lombok.Getter;
 
@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Map;
 
 @Getter
-public class LimitConfig extends RSConfiguration {
+public class LimitConfig extends RSConfiguration<RSCommandLimit> {
 
     private final Map<String, List<String>> map = new HashMap<>();
 
-    public LimitConfig(RSPlugin plugin) {
+    public LimitConfig(RSCommandLimit plugin) {
         super(plugin, "Limit.yml", null);
         setup(this);
     }
