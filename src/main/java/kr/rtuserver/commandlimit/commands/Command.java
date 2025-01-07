@@ -10,7 +10,7 @@ public class Command extends RSCommand<RSCommandLimit> {
     private final LimitConfig limitConfig;
 
     public Command(RSCommandLimit plugin) {
-        super(plugin, "rscl", true);
+        super(plugin, "rscl");
         this.limitConfig = plugin.getLimitConfig();
     }
 

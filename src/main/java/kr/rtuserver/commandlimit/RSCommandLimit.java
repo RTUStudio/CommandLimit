@@ -27,6 +27,6 @@ public class RSCommandLimit extends RSPlugin {
 
         registerEvent(new PlayerCommandPreprocess(this));
         registerEvent(new PlayerCommandSend(this));
-        registerCommand(new Command(this));
+        registerCommand(new Command(this), true);
     }
 }
