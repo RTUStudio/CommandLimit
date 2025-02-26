@@ -1,6 +1,6 @@
-package kr.rtuserver.commandlimit.configuration;
+package com.github.ipecter.rtustudio.commandlimit.configuration;
 
-import kr.rtuserver.commandlimit.RSCommandLimit;
+import com.github.ipecter.rtustudio.commandlimit.CommandLimit;
 import kr.rtuserver.framework.bukkit.api.config.RSConfiguration;
 import lombok.Getter;
 
@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Map;
 
 @Getter
-public class LimitConfig extends RSConfiguration<RSCommandLimit> {
+public class LimitConfig extends RSConfiguration<CommandLimit> {
 
     private final Map<String, List<String>> map = new HashMap<>();
 
-    public LimitConfig(RSCommandLimit plugin) {
+    public LimitConfig(CommandLimit plugin) {
         super(plugin, "Limit.yml", null);
         setup(this);
     }
@@ -25,8 +25,8 @@ public class LimitConfig extends RSConfiguration<RSCommandLimit> {
                 This feature configures the usage limit of commands
                 However, you also need permission what from command for execution""");
         getStringList("default", List.of("help"), """
-                rscl.default (기본적으로 활성화됨)
-                rscl.default (Enabled by default)""");
+                cmdlimit.default (기본적으로 활성화됨)
+                cmdlimit.default (Enabled by default)""");
         for (String key : getConfig().getKeys(false)) {
             map.put(key, getStringList(key, List.of()));
         }

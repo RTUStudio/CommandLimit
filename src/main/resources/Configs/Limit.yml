@@ -1,8 +1,8 @@
-# rscl.default (기본적으로 활성화됨)
-# rscl.default (Enabled by default)
+# cmdlimit.default (기본적으로 활성화됨)
+# cmdlimit.default (Enabled by default)
 default:
   - help
-#rscl.worldedit
+#cmdlimit.worldedit
 worldedit:
   - /wand
   - /copy

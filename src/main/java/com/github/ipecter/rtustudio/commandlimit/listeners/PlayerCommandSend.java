@@ -1,7 +1,6 @@
-package kr.rtuserver.commandlimit.listeners;
+package com.github.ipecter.rtustudio.commandlimit.listeners;
 
-import kr.rtuserver.commandlimit.RSCommandLimit;
-import kr.rtuserver.framework.bukkit.api.RSPlugin;
+import com.github.ipecter.rtustudio.commandlimit.CommandLimit;
 import kr.rtuserver.framework.bukkit.api.listener.RSListener;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,16 +11,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class PlayerCommandSend extends RSListener<RSCommandLimit> {
+public class PlayerCommandSend extends RSListener<CommandLimit> {
 
-    public PlayerCommandSend(RSCommandLimit plugin) {
+    public PlayerCommandSend(CommandLimit plugin) {
         super(plugin);
     }
 
     @EventHandler
     public void onTabComplete(PlayerCommandSendEvent e) {
         Player player = e.getPlayer();
-        if (player.hasPermission("rscl.bypass.tabComplete")) return;
+        if (player.hasPermission("cmdlimit.bypass.tabComplete")) return;
 
         e.getCommands().clear();
 
@@ -30,7 +29,7 @@ public class PlayerCommandSend extends RSListener<RSCommandLimit> {
         for (String group : map.keySet()) {
             List<String> list = map.get(group);
             if (list.isEmpty()) continue;
-            if (player.hasPermission("rscl." + group)) set.addAll(list);
+            if (player.hasPermission("cmdlimit." + group)) set.addAll(list);
         }
 
         e.getCommands().addAll(set);
