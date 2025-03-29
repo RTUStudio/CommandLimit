@@ -1,9 +1,9 @@
 package com.github.ipecter.rtustudio.commandlimit;
 
 import com.github.ipecter.rtustudio.commandlimit.configuration.LimitConfig;
-import com.github.ipecter.rtustudio.commandlimit.commands.Command;
-import com.github.ipecter.rtustudio.commandlimit.listeners.PlayerCommandPreprocess;
-import com.github.ipecter.rtustudio.commandlimit.listeners.PlayerCommandSend;
+import com.github.ipecter.rtustudio.commandlimit.command.Command;
+import com.github.ipecter.rtustudio.commandlimit.listener.PlayerCommandPreprocess;
+import com.github.ipecter.rtustudio.commandlimit.listener.PlayerCommandSend;
 import kr.rtuserver.framework.bukkit.api.RSPlugin;
 import lombok.Getter;
 import org.bukkit.permissions.PermissionDefault;

@@ -1,4 +1,4 @@
-package com.github.ipecter.rtustudio.commandlimit.commands;
+package com.github.ipecter.rtustudio.commandlimit.command;
 
 import com.github.ipecter.rtustudio.commandlimit.CommandLimit;
 import com.github.ipecter.rtustudio.commandlimit.configuration.LimitConfig;

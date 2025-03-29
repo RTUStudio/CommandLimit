@@ -1,4 +1,4 @@
-package com.github.ipecter.rtustudio.commandlimit.listeners;
+package com.github.ipecter.rtustudio.commandlimit.listener;
 
 import com.github.ipecter.rtustudio.commandlimit.CommandLimit;
 import kr.rtuserver.framework.bukkit.api.listener.RSListener;
