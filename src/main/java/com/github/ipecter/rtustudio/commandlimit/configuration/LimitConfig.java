@@ -1,7 +1,7 @@
 package com.github.ipecter.rtustudio.commandlimit.configuration;
 
 import com.github.ipecter.rtustudio.commandlimit.CommandLimit;
-import kr.rtuserver.framework.bukkit.api.config.RSConfiguration;
+import kr.rtuserver.framework.bukkit.api.configuration.RSConfiguration;
 import lombok.Getter;
 
 import java.util.HashMap;
@@ -31,4 +31,5 @@ public class LimitConfig extends RSConfiguration<CommandLimit> {
             map.put(key, getStringList(key, List.of()));
         }
     }
+
 }

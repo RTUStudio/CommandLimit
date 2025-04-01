@@ -1,7 +1,7 @@
 package com.github.ipecter.rtustudio.commandlimit;
 
 import com.github.ipecter.rtustudio.commandlimit.configuration.LimitConfig;
-import com.github.ipecter.rtustudio.commandlimit.command.Command;
+import com.github.ipecter.rtustudio.commandlimit.command.MainCommand;
 import com.github.ipecter.rtustudio.commandlimit.listener.PlayerCommandPreprocess;
 import com.github.ipecter.rtustudio.commandlimit.listener.PlayerCommandSend;
 import kr.rtuserver.framework.bukkit.api.RSPlugin;
@@ -23,6 +23,7 @@ public class CommandLimit extends RSPlugin {
 
         registerEvent(new PlayerCommandPreprocess(this));
         registerEvent(new PlayerCommandSend(this));
-        registerCommand(new Command(this), true);
+        registerCommand(new MainCommand(this), true);
     }
+
 }

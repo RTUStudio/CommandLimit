@@ -5,11 +5,11 @@ import com.github.ipecter.rtustudio.commandlimit.configuration.LimitConfig;
 import kr.rtuserver.framework.bukkit.api.command.RSCommand;
 import kr.rtuserver.framework.bukkit.api.command.RSCommandData;
 
-public class Command extends RSCommand<CommandLimit> {
+public class MainCommand extends RSCommand<CommandLimit> {
 
     private final LimitConfig limitConfig;
 
-    public Command(CommandLimit plugin) {
+    public MainCommand(CommandLimit plugin) {
         super(plugin, "cmdlimit");
         this.limitConfig = plugin.getLimitConfig();
     }
