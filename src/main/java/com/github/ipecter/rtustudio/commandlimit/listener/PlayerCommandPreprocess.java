@@ -2,7 +2,7 @@ package com.github.ipecter.rtustudio.commandlimit.listener;
 
 import com.github.ipecter.rtustudio.commandlimit.CommandLimit;
 import kr.rtuserver.framework.bukkit.api.listener.RSListener;
-import kr.rtuserver.framework.bukkit.api.utility.player.PlayerChat;
+import kr.rtuserver.framework.bukkit.api.player.PlayerChat;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
