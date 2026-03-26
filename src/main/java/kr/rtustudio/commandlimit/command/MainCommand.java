@@ -2,8 +2,8 @@ package kr.rtustudio.commandlimit.command;
 
 import kr.rtustudio.commandlimit.CommandLimit;
 import kr.rtustudio.commandlimit.configuration.WhitelistConfig;
+import kr.rtustudio.framework.bukkit.api.command.CommandArgs;
 import kr.rtustudio.framework.bukkit.api.command.RSCommand;
-import kr.rtustudio.framework.bukkit.api.command.RSCommandData;
 
 public class MainCommand extends RSCommand<CommandLimit> {
 
@@ -12,7 +12,7 @@ public class MainCommand extends RSCommand<CommandLimit> {
     }
 
     @Override
-    protected void reload(RSCommandData data) {
-        getPlugin().reloadConfiguration(WhitelistConfig.class);
+    protected void reload(CommandArgs args) {
+        plugin.reloadConfiguration(WhitelistConfig.class);
     }
 }
