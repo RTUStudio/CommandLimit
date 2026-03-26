@@ -11,7 +11,7 @@ import org.bukkit.permissions.PermissionDefault;
 
 @Getter
 public class CommandLimit extends RSPlugin {
- 
+
     @Getter
     private static CommandLimit instance;
 
