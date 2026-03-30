@@ -2,3 +2,4 @@ cmdlimit:
   name: "명령어제어"
   description: "명령어 제한 관리 명령어입니다."
   usage: "/명령어제어"
+

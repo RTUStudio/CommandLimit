@@ -1,0 +1,4 @@
+commandlimit:
+  name: "CommandLimit"
+  description: "CommandLimit management command."
+  usage: "/commandlimit"
